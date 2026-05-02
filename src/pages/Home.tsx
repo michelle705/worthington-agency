@@ -255,7 +255,7 @@ export default function Home() {
             style={{
               flex: "1 1 380px",
               minHeight: 380,
-              backgroundImage: `url(/founder.jpg)`,
+              backgroundImage: `url(/founder.png)`,
               backgroundSize: "cover",
               backgroundPosition: "center top",
             }}
