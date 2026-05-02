@@ -145,7 +145,7 @@ export default function Home() {
                 fontFamily: sans,
               }}
             >
-              Wesley Chapel, FL
+              Zephyrhills, FL
             </span>
           </div>
 
@@ -255,7 +255,7 @@ export default function Home() {
             style={{
               flex: "1 1 380px",
               minHeight: 380,
-              backgroundImage: `url(/philena.png?v=2)`,
+              backgroundImage: `url(/founder.jpg)`,
               backgroundSize: "cover",
               backgroundPosition: "center top",
             }}
