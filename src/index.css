@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --navy:        #1C2B47;
+  --navy-dark:   #141E32;
+  --navy-mid:    #1F3055;
+  --gold:        #C4963A;
+  --gold-light:  #D9AC52;
+  --gold-dark:   #A07828;
+  --gold-muted:  #B8962E;
+  --cream:       #EDE7DA;
+  --cream-light: #F5F1E8;
+  --cream-mid:   #E2D9C8;
+
+  --background: 38 30% 95%;
+  --foreground: 220 40% 13%;
+  --border: 38 20% 82%;
+  --card: 38 25% 97%;
+  --card-foreground: 220 40% 13%;
+  --card-border: 38 20% 84%;
+  --popover: 38 25% 97%;
+  --popover-foreground: 220 40% 13%;
+  --primary: 38 58% 50%;
+  --primary-foreground: 220 40% 10%;
+  --secondary: 220 55% 17%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 38 20% 90%;
+  --muted-foreground: 220 20% 45%;
+  --accent: 220 55% 17%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --input: 38 20% 82%;
+  --ring: 38 58% 50%;
+
+  --app-font-sans: 'Montserrat', sans-serif;
+  --app-font-serif: 'Cormorant Garamond', Georgia, serif;
+  --app-font-mono: Menlo, monospace;
+  --radius: 0.125rem;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(196,150,58,.5); }
+  50%      { opacity: .7; box-shadow: 0 0 0 6px rgba(196,150,58,0); }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--cream-light);
+    color: var(--navy);
+    overflow-x: hidden;
+    @apply antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
