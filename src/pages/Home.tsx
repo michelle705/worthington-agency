@@ -52,6 +52,17 @@ function GoldDivider() {
   );
 }
 
+function GoldLine() {
+  return (
+    <div style={{
+      width: "100%",
+      height: 1,
+      background: `linear-gradient(90deg, transparent 0%, ${GOLD_DARK} 20%, ${GOLD} 50%, ${GOLD_DARK} 80%, transparent 100%)`,
+      boxShadow: `0 0 6px rgba(196,150,58,0.5), 0 0 18px rgba(196,150,58,0.2)`,
+    }} />
+  );
+}
+
 export default function Home() {
   const form = useForm<ContactForm>({
     resolver: zodResolver(contactSchema),
@@ -245,9 +256,10 @@ export default function Home() {
         </div>
       </section>
 
+      <GoldLine />
       {/* ── HOME & AUTO — SPLIT ───────────────────────────────────────────── */}
       <section
-        style={{ borderTop: `1px solid ${BORDER}`, borderBottom: `1px solid ${BORDER}` }}
+        style={{ borderTop: "none", borderBottom: "none" }}
       >
         <div style={{ display: "flex", flexWrap: "wrap", minHeight: 540 }}>
           {/* Left: photo */}
@@ -255,7 +267,7 @@ export default function Home() {
             style={{
               flex: "1 1 380px",
               minHeight: 380,
-              backgroundImage: `url(/founder.png)`,
+              backgroundImage: `url(${import.meta.env.BASE_URL}founder.png)`,
               backgroundSize: "cover",
               backgroundPosition: "center top",
             }}
@@ -333,8 +345,9 @@ export default function Home() {
         </div>
       </section>
 
+      <GoldLine />
       {/* ── COVERAGE THAT FITS YOUR LIFE ─────────────────────────────────── */}
-      <section id="coverage" style={{ background: CREAM, padding: "88px 48px", borderBottom: `1px solid ${BORDER}` }}>
+      <section id="coverage" style={{ background: CREAM, padding: "88px 48px" }}>
         <div style={{ maxWidth: 1040, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <p
@@ -452,6 +465,7 @@ export default function Home() {
         </div>
       </section>
 
+      <GoldLine />
       {/* ── FOUNDER / ABOUT ───────────────────────────────────────────────── */}
       <section
         id="about"
@@ -522,6 +536,7 @@ export default function Home() {
         </div>
       </section>
 
+      <GoldLine />
       {/* ── MEET THE TEAM ─────────────────────────────────────────────────── */}
       <section
         id="team"
@@ -613,8 +628,9 @@ export default function Home() {
         </div>
       </section>
 
+      <GoldLine />
       {/* ── THREE PILLARS ─────────────────────────────────────────────────── */}
-      <section style={{ background: CREAM_MID, padding: "88px 48px", borderBottom: `1px solid ${BORDER}` }}>
+      <section style={{ background: CREAM_MID, padding: "88px 48px" }}>
         <div style={{ maxWidth: 1040, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <h2
@@ -708,6 +724,7 @@ export default function Home() {
         </div>
       </section>
 
+      <GoldLine />
       {/* ── CLIENT TESTIMONIALS ───────────────────────────────────────────── */}
       <section
         id="testimonials"
@@ -814,6 +831,7 @@ export default function Home() {
         </div>
       </section>
 
+      <GoldLine />
       {/* ── OUR RESOURCES ─────────────────────────────────────────────────── */}
       <section
         id="resources"
@@ -881,6 +899,7 @@ export default function Home() {
         </div>
       </section>
 
+      <GoldLine />
       {/* ── CONTACT CTA ───────────────────────────────────────────────────── */}
       <section
         id="contact"
@@ -1094,6 +1113,7 @@ export default function Home() {
         </div>
       </section>
 
+      <GoldLine />
       {/* ── FOOTER ────────────────────────────────────────────────────────── */}
       <footer
         style={{
